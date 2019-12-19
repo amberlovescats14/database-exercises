@@ -41,7 +41,7 @@ or last_name like 'e%';
 select * from employees where last_name like '%e'
                            and last_name like 'e%';
 
-select datediff(now(), hire_date) from employees where
+select *, datediff(now(), hire_date) from employees where
 (month(birth_date)=12 and day(birth_date)=25)
 and hire_date between '1989-12-31' and '2000-01-01'
 order by birth_date, hire_date desc;
